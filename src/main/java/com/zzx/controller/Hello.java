@@ -32,4 +32,8 @@ public class Hello {
         return "hello world again";
     }
 
+    @RequestMapping("/hello_2")
+    public String hello_2(){
+        return "hello world again again";
+    }
 }
