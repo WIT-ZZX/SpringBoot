@@ -1,6 +1,8 @@
 package com.zzx.controller;
 
 import com.zzx.model.User;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,15 +15,21 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class Hello {
+    Logger logger = LoggerFactory.getLogger(getClass());
 
     @RequestMapping("/hello")
     public User hello(){
-        System.out.print("hello world");
         User user = new User();
         user.setName("kevin");
         user.setPwd("123");
-        return user;
 
+        logger.info("hello world");
+        return user;
+    }
+
+    @RequestMapping("/hello_1")
+    public String hello_1(){
+        return "hello world again";
     }
 
 }
