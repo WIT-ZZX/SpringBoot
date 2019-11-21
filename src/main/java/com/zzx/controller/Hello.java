@@ -1,6 +1,6 @@
 package com.zzx.controller;
 
-import com.zzx.model.User;
+import com.zzx.model.People;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,8 +18,8 @@ public class Hello {
     Logger logger = LoggerFactory.getLogger(getClass());
 
     @RequestMapping("/hello")
-    public User hello(){
-        User user = new User();
+    public People hello(){
+        People user = new People();
         user.setName("kevin");
         user.setPwd("123");
 
